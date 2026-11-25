@@ -1,0 +1,200 @@
+
+/* General Styling */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #CFCCD6;
+    color: #322E18;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header */
+
+.site-header {
+    padding: 15px 30px;
+    border-bottom: 2px solid #322E18;
+}
+
+.logo {
+    font-size: 25px;
+    text-decoration: none;
+    color: #322E18;
+}
+
+.logo span {
+    color: #847979;
+}
+
+/* Navigation - Flexbox */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #322E18;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Layout - Grid */
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    padding: 30px;
+}
+
+/* Welcome Section - Flexbox */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #E7E5EC;
+    padding: 20px;
+}
+
+.hero img {
+    width: 50%;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.button {
+    background-color: #322E18;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* Course Cards - Grid */
+
+.gallery-section {
+    margin-top: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #E7E5EC;
+    border: 1px solid #847979;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-link {
+    color: #322E18;
+}
+
+.feature {
+    grid-column: span 2;
+}
+
+/* Sidebar */
+
+aside {
+    background-color: #BBC2E2;
+    padding: 20px;
+}
+
+aside img {
+    width: 100%;
+}
+
+figcaption {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Footer */
+
+footer {
+    border-top: 2px solid #322E18;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        grid-column: span 1;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+}
